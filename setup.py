@@ -40,11 +40,11 @@ is_py3 = (py_ver[0] == 3)
 tests_require = [
     'nose',
     'unittest2',
-    'gottwall==0.4.2']
+    'gottwall==0.5.2']
 
 install_requires = [
     "redis",
-    "tornado-redis==2.4.1"]
+    "tornado-redis==2.4.15"]
 
 setup(
     name="gottwall-backend-redis",
