@@ -19,7 +19,9 @@ from tornado import gen
 from tornadoredis.exceptions import ConnectionError
 
 from gottwall.backends.base import BaseBackend
-from gottwall.processing import RedisBackendPeriodicProcessor
+
+
+from gw_backend_redis.processing import RedisBackendPeriodicProcessor
 
 
 logger = getLogger()

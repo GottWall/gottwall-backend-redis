@@ -20,7 +20,8 @@ BACKENDS = {
         'PORT': 6379,
         'PASSWORD': None,
         'DB': 2,
-        "CHANNEL": "gottwall"},
+        "CHANNEL": "gottwall",
+        "PROCESSORS": ["gw_backend_redis.processing.RedisBackendPeriodicProcessor"]},
     }
 
 TEMPLATE_DEBUG = True
