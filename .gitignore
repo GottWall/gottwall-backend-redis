@@ -25,3 +25,9 @@ pip-log.txt
 dist/*
 _build/*
 build/*
+virtualenv.py
+*.pyprof
+*.pyprof_out
+*.egg
+*.egg/
+.DS_Store
