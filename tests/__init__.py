@@ -10,6 +10,9 @@ Unittests for gw_backend_redis
 :license: BSD, see LICENSE for more details.
 """
 
+import sys
+sys.path.append("/github/libs/gottwall/")
+
 import unittest
 from backends import RedisBackendTestCase
 

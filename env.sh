@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REQ_FILE=./req.txt
+REQ_FILE=./dev_req.txt
 
 
 if [ ! -d "./tools/buildenv.sh" ]; then

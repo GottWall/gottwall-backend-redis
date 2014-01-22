@@ -12,6 +12,7 @@ Python client with redis transport for GottWall statistics aggregator
 
 
 import sys
+
 import os
 from setuptools import  setup
 
@@ -39,12 +40,13 @@ is_py3 = (py_ver[0] == 3)
 
 tests_require = [
     'nose',
-    'unittest2',
-    'gottwall==0.5.2']
+    'unittest2']
 
 install_requires = [
-    "redis",
-    "tornado-redis==2.4.15"]
+    "redis==2.9.0",
+    "tornado-redis==2.4.15",
+    "gottwall==0.5.0"
+    ]
 
 setup(
     name="gottwall-backend-redis",

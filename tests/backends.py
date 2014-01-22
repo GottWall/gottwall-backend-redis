@@ -14,13 +14,13 @@ import datetime
 import json
 import os
 import random
+
 import gottwall.default_config
 import tornado.gen
 import tornadoredis
-from gottwal.utils.tests import async_test
 from gottwall.aggregator import AggregatorApplication
 from gottwall.config import Config
-from gottwall.utils.tests import AsyncHTTPBaseTestCase
+from gottwall.utils.tests import async_test, AsyncHTTPBaseTestCase
 from tornado import ioloop
 
 
@@ -91,7 +91,7 @@ class RedisBackendTestCase(AsyncHTTPBaseTestCase, RedisTestCaseMixin):
         config = Config()
         config.from_module(gottwall.default_config)
 
-        config.update({"BACKENDS": {"gw_backends_redis.backends.redis.RedisBackend": {"HOST": HOST}},
+        config.update({"BACKENDS": {"gw_backend_redis.backend.RedisBackend": {"HOST": HOST}},
                        "STORAGE": "gottwall.storages.MemoryStorage",
                        "REDIS_HOST": HOST,
                        "PROJECTS": {"test_project": "secretkey2"},
