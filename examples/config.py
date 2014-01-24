@@ -20,9 +20,8 @@ BACKENDS = {
         'PORT': 6379,
         'PASSWORD': None,
         'DB': 2,
-        "CHANNEL": "gottwall",
-        "PROCESSORS": ["gw_backend_redis.processing.RedisBackendPeriodicProcessor"]},
-    }
+        "CHANNEL": "gottwall"
+    }}
 
 TEMPLATE_DEBUG = True
 
@@ -40,7 +39,7 @@ USERS = ["alexandr.s.rus@gmail.com"]
 
 SECRET_KEY = "dwefwefwefwecwef"
 
-# http://public_key:secret_key@host.com
+# http://pulic_key:secret_key@host.com
 
 PROJECTS = {"test_project": "my_public_key",
             "another_project": "public_key2"}

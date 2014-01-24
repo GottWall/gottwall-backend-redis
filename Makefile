@@ -10,7 +10,7 @@ test:
 	python setup.py nosetests --stop --tests tests.py
 
 travis:
-	python setup.py nosetests --tests tests.py
+	python setup.py test
 
 coverage:
 	python setup.py nosetests  --with-coverage --cover-package=stati --cover-html --cover-html-dir=coverage_out coverage
@@ -28,7 +28,7 @@ build:
 version := $(shell sh -c "grep -oP 'VERSION = \"\K[0-9\.]*?(?=\")' ./setup.py")
 
 release:
-	git tag -f v$(version) && git push --tags
+	git tag -f v$(version) && git push upstream --tags
 	python setup.py sdist upload
 
 clean-pyc:

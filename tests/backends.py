@@ -43,6 +43,15 @@ class TestRedisClient(tornadoredis.Client):
 
 class RedisTestCaseMixin(object):
 
+    @property
+    def redis_settings(self):
+        env = os.environ
+
+        return {"HOST": env.get('GOTTWALL_REDIS_HOST', "10.8.9.8"),
+                "PORT": env.get('GOTTWALL_REDIS_PORT', 6379),
+                "DB": env.get('GOTTWALL_REDIS_DB', 0)}
+
+
     def setUp(self):
         super(RedisTestCaseMixin, self).setUp()
         self.client = self._new_client()

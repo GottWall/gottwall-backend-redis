@@ -4,7 +4,7 @@ python:
     - "2.6"
     - "2.7"
 
-env: STATI_REDIS_HOST="127.0.0.1"
+env: GOTTWALL_REDIS_HOST="127.0.0.1"
 
 services:
     - redis-server
